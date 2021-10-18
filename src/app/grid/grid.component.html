@@ -1,9 +1,14 @@
-<ag-grid-angular
-  class="ag-theme-material"
-  [rowData]="rowData"
-  [columnDefs]="columnDefs"
-  [domLayout]="domLayout"
-  [pagination]="pagination"
-  [paginationAutoPageSize]="paginationAutoPageSize"
->
-</ag-grid-angular>
+<div class="app-grid-container">
+  <div>
+    <h2>Sensor Data</h2>
+  </div>
+  <ag-grid-angular
+    class="app-grid ag-theme-material"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [domLayout]="domLayout"
+    [pagination]="pagination"
+    [paginationAutoPageSize]="paginationAutoPageSize"
+  >
+  </ag-grid-angular>
+</div>

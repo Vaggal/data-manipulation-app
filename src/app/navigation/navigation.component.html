@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <span mat-button routerLink="/">My Application</span>
-  <span class="spacer"></span>
+  <span class="app-spacer"></span>
   <ng-container *ngIf="isSmallScreen">
     <button mat-icon-button [matMenuTriggerFor]="dropMenu">
       <mat-icon>more_vert</mat-icon>
@@ -8,7 +8,7 @@
     <mat-menu #dropMenu="matMenu">
       <a mat-menu-item class="menu-button" routerLink="/">Home</a>
       <a mat-menu-item class="menu-button" routerLink="/grid">Grid</a>
-      <a mat-menu-item class="menu-button" disabled>Map</a>
+      <a mat-menu-item class="menu-button" routerLink="/map">Map</a>
       <a mat-menu-item class="menu-button" disabled>Graph</a>
     </mat-menu>
   </ng-container>
@@ -17,8 +17,8 @@
     <mat-divider [vertical]="true" class="mat-divider-vertical"></mat-divider>
     <a mat-button class="menu-button" routerLink="/grid">Grid</a>
     <mat-divider [vertical]="true" class="mat-divider-vertical"></mat-divider>
-    <a mat-button class="menu-button">Map</a>
+    <a mat-button class="menu-button" routerLink="/map">Map</a>
     <mat-divider [vertical]="true" class="mat-divider-vertical"></mat-divider>
-    <a mat-button class="menu-button">Graph</a>
+    <a mat-button class="menu-button" disabled>Graph</a>
   </ng-container>
 </mat-toolbar>

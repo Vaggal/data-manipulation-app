@@ -15,9 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MapComponent } from './map/map.component';
+import { HomeComponent } from './home/home.component';
+import { MapService } from './map/map.service';
 
 @NgModule({
-  declarations: [AppComponent, GridComponent, NavigationComponent],
+  declarations: [AppComponent, GridComponent, NavigationComponent, MapComponent, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -31,7 +34,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatIconModule,
     LayoutModule,
   ],
-  providers: [AgGridAngular],
+  providers: [AgGridAngular, MapService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

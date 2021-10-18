@@ -23,7 +23,7 @@ export class GridComponent implements OnInit {
     { field: 'reading_ts', sortable: true },
   ];
   rowData: Reading[] = [];
-  domLayout = 'autoHeight';
+  domLayout = 'normal';
   pagination = true;
   paginationPageSize = 10;
   paginationAutoPageSize = true;

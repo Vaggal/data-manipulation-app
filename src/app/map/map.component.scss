@@ -1,12 +1,12 @@
-.app-grid-container {
+.app-map-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.app-grid {
+.app-map {
+  flex-shrink: 1;
   flex-grow: 1;
-  width: 100%;
+  width: 95%;
 }
