@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
+import { MaterialModule } from '../material.module';
 
 import { NavigationComponent } from './navigation.component';
 
@@ -8,9 +10,10 @@ describe('NavigationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavigationComponent ]
-    })
-    .compileComponents();
+      imports: [MaterialModule],
+      declarations: [NavigationComponent],
+      providers: [{ provide: MATERIAL_SANITY_CHECKS, useValue: false }],
+    }).compileComponents();
   });
 
   beforeEach(() => {
