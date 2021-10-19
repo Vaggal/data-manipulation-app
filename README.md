@@ -34,11 +34,13 @@ The calculation of the center of the sensor locations was done by getting an ave
 
 The Graph page is disabled as there was no time for its implementation. Charts.js/D3.js could be used as an easy solution.
 
-The already generated tests were adjusted to pass with the changes of the code but no new tests were created.
+The already generated tests were adjusted to pass with the changes of the code but no new tests were created as there was no time for that.
 A test fails in the map component, probably due to a type error in the OpenLayers library but no solution was found as the time spent there was already too much(>30 mins).  
 Cypress could be used to generate some e2e tests if there was more time for their implementation.
 
 The app is responsive judging by quick manual testing that was performed.
+
+One more thing that could be improved is maybe perform some caching of the readings so that they don't have to be fetched every time we navigate either in the grid or in the map component.
 
 ## How to run the app
 

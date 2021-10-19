@@ -8,9 +8,7 @@ export class MapService {
   constructor() {}
 
   /**
-   * finds the locations of each sensor provided in the readings
-   * @param readings
-   * @returns
+   * Finds the locations of each sensor provided in the readings
    */
   getLocations(readings: Reading[]): any[] {
     let uniqueIds = [...new Set(readings.map((o) => o.id))];
@@ -24,8 +22,6 @@ export class MapService {
 
   /**
    * Calculates the average values for longitude and latitude of the sensors locations
-   * @param coords
-   * @returns
    */
   calculateCenter(coords: any[]): number[] {
     if (coords.length === 0) {
