@@ -12,7 +12,7 @@
 
 [AG Grid](https://www.ag-grid.com/) because it is a very versatile library with a plethora of features and a lot of resources.
 
-[OpenLayers](https://openlayers.org/) is a very popular mapping library and was chosen due to that.
+[OpenLayers](https://openlayers.org/) is a very popular mapping library. Having no previous experience with mapping apps, that was the main reason that it was chosen for.
 
 [Angular Material](https://material.angular.io/) was selected because it provides an easy way to style your applications and a lot of components out of the box.
 
@@ -34,7 +34,7 @@ The calculation of the center of the sensor locations was done by getting an ave
 
 The Graph page is disabled as there was no time for its implementation. Charts.js/D3.js could be used as an easy solution.
 
-The already generated tests were adjusted to pass with the changes of the code and but no new tests were created.
+The already generated tests were adjusted to pass with the changes of the code but no new tests were created.
 A test fails in the map component, probably due to a type error in the OpenLayers library but no solution was found as the time spent there was already too much(>30 mins).  
 Cypress could be used to generate some e2e tests if there was more time for their implementation.
 
@@ -49,3 +49,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests.
+
+If you need more info about the failed test run `npm run test -- --detectOpenHandles`
