@@ -42,25 +42,7 @@ export class MapComponent implements OnInit, AfterViewInit {
         })
       );
     });
-    // let vectorSource = this.map.addLayer();
 
-    let vectorLayer = new VectorLayer({
-      style: new Style({
-        image: new CircleStyle({
-          radius: 6,
-          fill: new Fill({ color: 'black' }),
-          stroke: new Stroke({
-            color: [255, 0, 0],
-            width: 2,
-          }),
-        }),
-      }),
-    });
-    vectorLayer.setSource(
-      new VectorSource({
-        features: sensorPoints,
-      })
-    );
     this.map = new Map({
       view: new View({
         center: fromLonLat(this.mapService.calculateCenter(this.coords)),
@@ -70,9 +52,23 @@ export class MapComponent implements OnInit, AfterViewInit {
         new TileLayer({
           source: new OSM(),
         }),
+        new VectorLayer({
+          source: new VectorSource({
+            features: sensorPoints,
+          }),
+          style: new Style({
+            image: new CircleStyle({
+              radius: 6,
+              fill: new Fill({ color: 'black' }),
+              stroke: new Stroke({
+                color: [255, 0, 0],
+                width: 2,
+              }),
+            }),
+          }),
+        }),
       ],
       target: 'ol-map',
     });
-    this.map.addLayer(vectorLayer);
   }
 }
