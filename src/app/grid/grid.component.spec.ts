@@ -24,4 +24,11 @@ describe('GridComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain the page heading', () => {
+    const hostElement: HTMLElement = fixture.nativeElement;
+    const nameDisplay: HTMLElement = hostElement.querySelector('h2')!;
+
+    expect(nameDisplay.textContent).toBe('Sensor Data');
+  });
 });
