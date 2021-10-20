@@ -9,7 +9,7 @@
       <a mat-menu-item class="menu-button" routerLink="/">Home</a>
       <a mat-menu-item class="menu-button" routerLink="/grid">Grid</a>
       <a mat-menu-item class="menu-button" routerLink="/map">Map</a>
-      <a mat-menu-item class="menu-button" disabled>Graph</a>
+      <a mat-menu-item class="menu-button" routerLink="/graph">Graph</a>
     </mat-menu>
   </ng-container>
   <ng-container *ngIf="!isSmallScreen">
@@ -19,6 +19,6 @@
     <mat-divider [vertical]="true" class="mat-divider-vertical"></mat-divider>
     <a mat-button class="menu-button" routerLink="/map">Map</a>
     <mat-divider [vertical]="true" class="mat-divider-vertical"></mat-divider>
-    <a mat-button class="menu-button" disabled>Graph</a>
+    <a mat-button class="menu-button" routerLink="/graph">Graph</a>
   </ng-container>
 </mat-toolbar>

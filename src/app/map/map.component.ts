@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { MapService } from './map.service';
@@ -18,6 +18,8 @@ import OSM from 'ol/source/OSM';
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements OnInit, AfterViewInit {
+  @ViewChild('olMap', { static: true }) olMap!: ElementRef;
+
   coords: any[] = [];
   map!: Map;
   constructor(private mapService: MapService, private actRoute: ActivatedRoute) {}
@@ -68,7 +70,7 @@ export class MapComponent implements OnInit, AfterViewInit {
           }),
         }),
       ],
-      target: 'ol-map',
+      target: this.olMap.nativeElement,
     });
   }
 }

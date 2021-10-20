@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GraphComponent } from './graph/graph.component';
 import { GridComponent } from './grid/grid.component';
 import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
@@ -20,6 +21,13 @@ const routes: Routes = [
   {
     path: 'map',
     component: MapComponent,
+    resolve: {
+      readings: ReadingsResolver,
+    },
+  },
+  {
+    path: 'graph',
+    component: GraphComponent,
     resolve: {
       readings: ReadingsResolver,
     },

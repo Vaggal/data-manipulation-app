@@ -13,9 +13,10 @@ import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
 import { MapService } from './map/map.service';
 import { MaterialModule } from './material.module';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
-  declarations: [AppComponent, GridComponent, NavigationComponent, MapComponent, HomeComponent],
+  declarations: [AppComponent, GridComponent, NavigationComponent, MapComponent, HomeComponent, GraphComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, AgGridModule, BrowserAnimationsModule, MaterialModule],
   providers: [AgGridAngular, MapService],
   bootstrap: [AppComponent],
